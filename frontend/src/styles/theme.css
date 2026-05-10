@@ -3,92 +3,83 @@
 :root {
   --font-size: 16px;
   --font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-
-  /* Warm, calming palette */
-  --background: #F7F5F0; /* Oatmeal off-white */
-  --foreground: #2D3142; /* Deep soft Charcoal */
-  --card: #FFFFFF; /* Matte White */
-  --card-foreground: #2D3142;
-  --popover: #FFFFFF;
-  --popover-foreground: #2D3142;
-  --primary: #7CA982; /* Sage Green */
-  --primary-foreground: #FFFFFF;
-  --secondary: #7A9E9F; /* Dusty Blue */
-  --secondary-foreground: #FFFFFF;
-  --muted: #E8E6E1;
-  --muted-foreground: #6B6E7C;
-  --accent: #F0EDE6;
-  --accent-foreground: #2D3142;
-  --destructive: #D97979;
-  --destructive-foreground: #FFFFFF;
-  --border: rgba(45, 49, 66, 0.08);
+  --background: #ffffff;
+  --foreground: #101010;
+  --card: #ffffff;
+  --card-foreground: #101010;
+  --popover: #ffffff;
+  --popover-foreground: #101010;
+  --primary: #e30045;
+  --primary-foreground: #ffffff;
+  --secondary: #1f1f1f;
+  --secondary-foreground: #ffffff;
+  --muted: #f4f4f5;
+  --muted-foreground: #6f6f76;
+  --accent: #f7f7f8;
+  --accent-foreground: #101010;
+  --destructive: #c8264d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(16, 16, 16, 0.09);
   --input: transparent;
-  --input-background: #FAFAF8;
-  --switch-background: #D4D2CC;
+  --input-background: #fafafa;
+  --switch-background: #d7d7db;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: rgba(124, 169, 130, 0.3);
-
-  /* Soft pastel chart colors */
-  --chart-1: #7CA982; /* Sage Green */
-  --chart-2: #A8C6A5; /* Light Sage */
-  --chart-3: #7A9E9F; /* Dusty Blue */
-  --chart-4: #B4C7C8; /* Light Dusty Blue */
-  --chart-5: #D9C5B2; /* Warm Beige */
-
-  --radius: 1.5rem; /* 24px - soft rounded corners */
-  --sidebar: #F7F5F0;
-  --sidebar-foreground: #2D3142;
-  --sidebar-primary: #7CA982;
-  --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #E8E6E1;
-  --sidebar-accent-foreground: #2D3142;
-  --sidebar-border: rgba(45, 49, 66, 0.08);
-  --sidebar-ring: rgba(124, 169, 130, 0.3);
+  --ring: rgba(227, 0, 69, 0.24);
+  --chart-1: #e30045;
+  --chart-2: #ff5b8a;
+  --chart-3: #232323;
+  --chart-4: #72727a;
+  --chart-5: #d4d4d8;
+  --radius: 1.25rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #101010;
+  --sidebar-primary: #e30045;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f4f4f5;
+  --sidebar-accent-foreground: #101010;
+  --sidebar-border: rgba(16, 16, 16, 0.09);
+  --sidebar-ring: rgba(227, 0, 69, 0.24);
 }
 
 .dark {
-  /* Calm Night - Dark Mode */
-  --background: #1C1E24; /* Deep, warm Slate */
-  --foreground: #EAEAEA; /* Gentle Ash/Oatmeal off-white */
-  --card: #2A2C35; /* Soft, lighter matte gray */
-  --card-foreground: #EAEAEA;
-  --popover: #2A2C35;
-  --popover-foreground: #EAEAEA;
-  --primary: #6B9B76; /* Desaturated Sage Green */
-  --primary-foreground: #FFFFFF;
-  --secondary: #6B8B8F; /* Desaturated Dusty Blue */
-  --secondary-foreground: #FFFFFF;
-  --muted: #363840;
-  --muted-foreground: #A8AAB0;
-  --accent: #32343D;
-  --accent-foreground: #EAEAEA;
-  --destructive: #C87373;
-  --destructive-foreground: #FFFFFF;
-  --border: rgba(234, 234, 234, 0.1);
+  --background: #09090b;
+  --foreground: #fafafa;
+  --card: #141417;
+  --card-foreground: #fafafa;
+  --popover: #141417;
+  --popover-foreground: #fafafa;
+  --primary: #ff295f;
+  --primary-foreground: #ffffff;
+  --secondary: #27272a;
+  --secondary-foreground: #fafafa;
+  --muted: #1f1f23;
+  --muted-foreground: #a1a1aa;
+  --accent: #18181b;
+  --accent-foreground: #fafafa;
+  --destructive: #ff5f7b;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.1);
   --input: transparent;
-  --input-background: #32343D;
-  --switch-background: #4A4C54;
+  --input-background: #18181b;
+  --switch-background: #3f3f46;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: rgba(107, 155, 118, 0.3);
-
-  /* Soft pastel chart colors for dark mode */
-  --chart-1: #6B9B76;
-  --chart-2: #8BAF8F;
-  --chart-3: #6B8B8F;
-  --chart-4: #96AEB0;
-  --chart-5: #C4B5A3;
-
-  --radius: 1.5rem;
-  --sidebar: #1C1E24;
-  --sidebar-foreground: #EAEAEA;
-  --sidebar-primary: #6B9B76;
-  --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #363840;
-  --sidebar-accent-foreground: #EAEAEA;
-  --sidebar-border: rgba(234, 234, 234, 0.1);
-  --sidebar-ring: rgba(107, 155, 118, 0.3);
+  --ring: rgba(255, 41, 95, 0.25);
+  --chart-1: #ff295f;
+  --chart-2: #ff7a9c;
+  --chart-3: #f4f4f5;
+  --chart-4: #71717a;
+  --chart-5: #3f3f46;
+  --radius: 1.25rem;
+  --sidebar: #09090b;
+  --sidebar-foreground: #fafafa;
+  --sidebar-primary: #ff295f;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #18181b;
+  --sidebar-accent-foreground: #fafafa;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: rgba(255, 41, 95, 0.25);
 }
 
 @theme inline {
@@ -141,6 +132,9 @@
     @apply bg-background text-foreground;
     font-family: var(--font-family);
     transition: background-color 0.3s ease, color 0.3s ease;
+    background-image:
+      radial-gradient(circle at top right, rgba(227, 0, 69, 0.08), transparent 24rem),
+      linear-gradient(180deg, #ffffff 0%, #fbfbfc 100%);
   }
 
   * {
@@ -149,11 +143,6 @@
     transition-timing-function: ease;
   }
 
-  /**
-  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
-  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
-  */
-
   html {
     font-size: var(--font-size);
   }
@@ -161,19 +150,19 @@
   h1 {
     font-size: var(--text-2xl);
     font-weight: var(--font-weight-medium);
-    line-height: 1.5;
+    line-height: 1.15;
   }
 
   h2 {
     font-size: var(--text-xl);
     font-weight: var(--font-weight-medium);
-    line-height: 1.5;
+    line-height: 1.2;
   }
 
   h3 {
     font-size: var(--text-lg);
     font-weight: var(--font-weight-medium);
-    line-height: 1.5;
+    line-height: 1.35;
   }
 
   h4 {

@@ -16,15 +16,14 @@ const CustomTooltip = ({ active, payload }: any) => {
   if (active && payload && payload.length) {
     return (
       <div
-        className="bg-white px-4 py-2"
+        className="bg-card px-4 py-2 border border-border"
         style={{
-          borderRadius: "12px",
-          boxShadow: "0 4px 24px rgba(124, 169, 130, 0.15)",
-          border: "1px solid rgba(124, 169, 130, 0.1)",
+          borderRadius: "14px",
+          boxShadow: "0 16px 32px rgba(16, 16, 16, 0.08)",
         }}
       >
         <p className="text-foreground" style={{ fontSize: "14px", fontWeight: 600 }}>
-          €{payload[0].value.toFixed(2)}
+          EUR {payload[0].value.toFixed(2)}
         </p>
         <p className="text-muted-foreground" style={{ fontSize: "12px" }}>
           {payload[0].payload.day}
@@ -46,7 +45,8 @@ export function WeeklyCampusSpend() {
       className="bg-card p-6"
       style={{
         borderRadius: "24px",
-        boxShadow: "0 2px 16px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.02)",
+        border: "1px solid rgba(16, 16, 16, 0.06)",
+        boxShadow: "0 14px 34px rgba(16, 16, 16, 0.05)",
       }}
     >
       <div className="mb-6">
@@ -54,7 +54,7 @@ export function WeeklyCampusSpend() {
           {t("weeklyCampusSpend")}
         </h3>
         <p className="text-muted-foreground" style={{ fontSize: "13px", fontWeight: 400 }}>
-          {t("total")}: €67.80
+          {t("total")}: EUR 67.80
         </p>
       </div>
 
@@ -63,15 +63,15 @@ export function WeeklyCampusSpend() {
           <AreaChart data={data} margin={{ top: 10, right: 0, left: 0, bottom: 0 }}>
             <defs>
               <linearGradient id="spendGradient" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#7CA982" stopOpacity={0.3} />
-                <stop offset="100%" stopColor="#7CA982" stopOpacity={0} />
+                <stop offset="0%" stopColor="#E30045" stopOpacity={0.28} />
+                <stop offset="100%" stopColor="#E30045" stopOpacity={0} />
               </linearGradient>
             </defs>
             <Tooltip content={<CustomTooltip />} cursor={false} />
             <Area
               type="monotone"
               dataKey="amount"
-              stroke="#7CA982"
+              stroke="#E30045"
               strokeWidth={3}
               fill="url(#spendGradient)"
               animationDuration={1200}
@@ -82,9 +82,9 @@ export function WeeklyCampusSpend() {
       </div>
 
       <div className="flex justify-between mt-4 px-1">
-        {data.map((item, index) => (
+        {data.map((item) => (
           <div key={item.day} className="text-center">
-            <div className="text-muted-foreground" style={{ fontSize: "11px", fontWeight: 400 }}>
+            <div className="text-muted-foreground" style={{ fontSize: "11px", fontWeight: 500 }}>
               {item.day}
             </div>
           </div>

@@ -9,13 +9,11 @@ export function TopUpScreen() {
   const [amount, setAmount] = useState(20);
 
   const handleConfirm = () => {
-    // Simulate successful top-up
     console.log("Top-up confirmed:", amount);
   };
 
   return (
     <div className="space-y-6">
-      {/* Amount Selection Card */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -23,17 +21,17 @@ export function TopUpScreen() {
         className="bg-card p-8"
         style={{
           borderRadius: "24px",
-          boxShadow: "0 2px 16px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.02)",
+          border: "1px solid rgba(16, 16, 16, 0.06)",
+          boxShadow: "0 14px 34px rgba(16, 16, 16, 0.05)",
         }}
       >
-        {/* Amount Display */}
         <div className="text-center mb-12">
-          <div className="text-muted-foreground mb-3" style={{ fontSize: "14px", fontWeight: 400 }}>
+          <div className="text-muted-foreground mb-3" style={{ fontSize: "14px", fontWeight: 500 }}>
             {t("amountToAdd")}
           </div>
           <div className="flex items-center justify-center gap-2">
-            <span className="text-primary" style={{ fontSize: "56px", fontWeight: 700, letterSpacing: "-0.02em" }}>
-              €
+            <span className="text-primary" style={{ fontSize: "40px", fontWeight: 700, letterSpacing: "-0.02em" }}>
+              EUR
             </span>
             <input
               type="number"
@@ -70,7 +68,6 @@ export function TopUpScreen() {
           `}</style>
         </div>
 
-        {/* Slider */}
         <div className="mb-12 px-4">
           <Slider.Root
             className="relative flex items-center select-none touch-none w-full h-8"
@@ -83,14 +80,14 @@ export function TopUpScreen() {
             <Slider.Track
               className="relative grow h-2"
               style={{
-                backgroundColor: "#E8E6E1",
+                backgroundColor: "#E5E5E8",
                 borderRadius: "100px",
               }}
             >
               <Slider.Range
                 className="absolute h-full"
                 style={{
-                  backgroundColor: "#7CA982",
+                  backgroundColor: "#E30045",
                   borderRadius: "100px",
                 }}
               />
@@ -99,26 +96,24 @@ export function TopUpScreen() {
               className="block w-7 h-7 bg-white shadow-lg outline-none cursor-grab active:cursor-grabbing transition-transform hover:scale-110"
               style={{
                 borderRadius: "100px",
-                border: "3px solid #7CA982",
-                boxShadow: "0 2px 12px rgba(124, 169, 130, 0.3)",
+                border: "3px solid #E30045",
+                boxShadow: "0 2px 12px rgba(227, 0, 69, 0.24)",
               }}
               aria-label="Amount"
             />
           </Slider.Root>
 
-          {/* Range Labels */}
           <div className="flex justify-between mt-3 px-1">
             <span className="text-muted-foreground" style={{ fontSize: "12px" }}>
-              €5
+              EUR 5
             </span>
             <span className="text-muted-foreground" style={{ fontSize: "12px" }}>
-              €200
+              EUR 200
             </span>
           </div>
         </div>
 
-        {/* Quick Amount Buttons */}
-        <div className="grid grid-cols-4 gap-3 mb-8">
+        <div className="grid grid-cols-2 gap-3 mb-2 sm:grid-cols-4">
           {[10, 20, 50, 100].map((quickAmount) => (
             <motion.button
               key={quickAmount}
@@ -136,16 +131,15 @@ export function TopUpScreen() {
               style={{
                 borderRadius: "16px",
                 fontSize: "14px",
-                fontWeight: 500,
+                fontWeight: 700,
               }}
             >
-              €{quickAmount}
+              EUR {quickAmount}
             </motion.button>
           ))}
         </div>
       </motion.div>
 
-      {/* Payment Methods Card */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -153,7 +147,8 @@ export function TopUpScreen() {
         className="bg-card p-6"
         style={{
           borderRadius: "24px",
-          boxShadow: "0 2px 16px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.02)",
+          border: "1px solid rgba(16, 16, 16, 0.06)",
+          boxShadow: "0 14px 34px rgba(16, 16, 16, 0.05)",
         }}
       >
         <h3 className="text-foreground mb-4" style={{ fontSize: "17px", fontWeight: 600 }}>
@@ -170,10 +165,10 @@ export function TopUpScreen() {
             onClick={handleConfirm}
             className="w-full bg-foreground text-white py-4 px-6 flex items-center justify-center gap-3 transition-all duration-300 hover:bg-opacity-90"
             style={{
-              borderRadius: "100px",
+              borderRadius: "18px",
               fontSize: "16px",
               fontWeight: 600,
-              boxShadow: "0 4px 20px rgba(45, 49, 66, 0.2)",
+              boxShadow: "0 12px 28px rgba(16, 16, 16, 0.18)",
             }}
           >
             <Apple className="w-5 h-5" />
@@ -189,10 +184,10 @@ export function TopUpScreen() {
             onClick={handleConfirm}
             className="w-full bg-white text-foreground py-4 px-6 flex items-center justify-center gap-3 transition-all duration-300 hover:bg-accent"
             style={{
-              borderRadius: "100px",
+              borderRadius: "18px",
               fontSize: "16px",
               fontWeight: 600,
-              border: "2px solid rgba(45, 49, 66, 0.12)",
+              border: "1px solid rgba(16, 16, 16, 0.12)",
             }}
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -213,10 +208,10 @@ export function TopUpScreen() {
             onClick={handleConfirm}
             className="w-full bg-white text-foreground py-4 px-6 flex items-center justify-center gap-3 transition-all duration-300 hover:bg-accent"
             style={{
-              borderRadius: "100px",
+              borderRadius: "18px",
               fontSize: "16px",
               fontWeight: 600,
-              border: "2px solid rgba(45, 49, 66, 0.12)",
+              border: "1px solid rgba(16, 16, 16, 0.12)",
             }}
           >
             <CreditCard className="w-5 h-5" />
