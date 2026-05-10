@@ -1,0 +1,202 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Warm, calming palette */
+  --background: #F7F5F0; /* Oatmeal off-white */
+  --foreground: #2D3142; /* Deep soft Charcoal */
+  --card: #FFFFFF; /* Matte White */
+  --card-foreground: #2D3142;
+  --popover: #FFFFFF;
+  --popover-foreground: #2D3142;
+  --primary: #7CA982; /* Sage Green */
+  --primary-foreground: #FFFFFF;
+  --secondary: #7A9E9F; /* Dusty Blue */
+  --secondary-foreground: #FFFFFF;
+  --muted: #E8E6E1;
+  --muted-foreground: #6B6E7C;
+  --accent: #F0EDE6;
+  --accent-foreground: #2D3142;
+  --destructive: #D97979;
+  --destructive-foreground: #FFFFFF;
+  --border: rgba(45, 49, 66, 0.08);
+  --input: transparent;
+  --input-background: #FAFAF8;
+  --switch-background: #D4D2CC;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: rgba(124, 169, 130, 0.3);
+
+  /* Soft pastel chart colors */
+  --chart-1: #7CA982; /* Sage Green */
+  --chart-2: #A8C6A5; /* Light Sage */
+  --chart-3: #7A9E9F; /* Dusty Blue */
+  --chart-4: #B4C7C8; /* Light Dusty Blue */
+  --chart-5: #D9C5B2; /* Warm Beige */
+
+  --radius: 1.5rem; /* 24px - soft rounded corners */
+  --sidebar: #F7F5F0;
+  --sidebar-foreground: #2D3142;
+  --sidebar-primary: #7CA982;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #E8E6E1;
+  --sidebar-accent-foreground: #2D3142;
+  --sidebar-border: rgba(45, 49, 66, 0.08);
+  --sidebar-ring: rgba(124, 169, 130, 0.3);
+}
+
+.dark {
+  /* Calm Night - Dark Mode */
+  --background: #1C1E24; /* Deep, warm Slate */
+  --foreground: #EAEAEA; /* Gentle Ash/Oatmeal off-white */
+  --card: #2A2C35; /* Soft, lighter matte gray */
+  --card-foreground: #EAEAEA;
+  --popover: #2A2C35;
+  --popover-foreground: #EAEAEA;
+  --primary: #6B9B76; /* Desaturated Sage Green */
+  --primary-foreground: #FFFFFF;
+  --secondary: #6B8B8F; /* Desaturated Dusty Blue */
+  --secondary-foreground: #FFFFFF;
+  --muted: #363840;
+  --muted-foreground: #A8AAB0;
+  --accent: #32343D;
+  --accent-foreground: #EAEAEA;
+  --destructive: #C87373;
+  --destructive-foreground: #FFFFFF;
+  --border: rgba(234, 234, 234, 0.1);
+  --input: transparent;
+  --input-background: #32343D;
+  --switch-background: #4A4C54;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: rgba(107, 155, 118, 0.3);
+
+  /* Soft pastel chart colors for dark mode */
+  --chart-1: #6B9B76;
+  --chart-2: #8BAF8F;
+  --chart-3: #6B8B8F;
+  --chart-4: #96AEB0;
+  --chart-5: #C4B5A3;
+
+  --radius: 1.5rem;
+  --sidebar: #1C1E24;
+  --sidebar-foreground: #EAEAEA;
+  --sidebar-primary: #6B9B76;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #363840;
+  --sidebar-accent-foreground: #EAEAEA;
+  --sidebar-border: rgba(234, 234, 234, 0.1);
+  --sidebar-ring: rgba(107, 155, 118, 0.3);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-family);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  * {
+    transition-property: background-color, border-color, color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+  }
+
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
